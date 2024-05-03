@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="761.0" style="-fx-background-color: #204b9c;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.efemsepci.autocratvideogame.controller.RegisterFormController">
+   <children>
+      <ImageView fitHeight="557.0" fitWidth="761.0">
+         <image>
+            <Image url="@capital_lux_elemek201703031806-e1515618578929.jpeg" />
+         </image>
+      </ImageView>
+      <PasswordField layoutX="261.0" layoutY="303.0" prefHeight="40.0" prefWidth="238.0" promptText="Password" focusTraversable="false" fx:id="password">
+         <font>
+            <Font name="Goudy Old Style" size="20.0" />
+         </font>
+      </PasswordField>
+      <TextField layoutX="261.0" layoutY="224.0" prefHeight="40.0" prefWidth="238.0" promptText="Username" focusTraversable="false" fx:id="username">
+         <font>
+            <Font name="Goudy Old Style" size="20.0" />
+         </font>
+      </TextField>
+      <Button layoutX="326.0" layoutY="392.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="109.0" style="-fx-background-color: white;" text="REGISTER" textFill="#204b9c" fx:id="registerButton" onAction="#registerButtonAction">
+         <font>
+            <Font name="Goudy Old Style Bold" size="16.0" />
+         </font>
+      </Button>
+      <TextField layoutX="261.0" layoutY="141.0" prefHeight="40.0" prefWidth="238.0" promptText="Email" focusTraversable="false" fx:id="email">
+         <font>
+            <Font name="Goudy Old Style" size="20.0" />
+         </font>
+      </TextField>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: white;" text="BACK" textFill="#204b9c" fx:id="backButton" onAction="#backButtonAction">
+         <font>
+            <Font name="Goudy Old Style Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

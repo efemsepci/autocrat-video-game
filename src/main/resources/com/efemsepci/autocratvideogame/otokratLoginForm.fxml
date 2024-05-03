@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="761.0" style="-fx-background-color: #204b9c;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.efemsepci.autocratvideogame.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="557.0" fitWidth="761.0">
+         <image>
+            <Image url="@capital_lux_elemek201703031806-e1515618578929.jpeg" />
+         </image>
+      </ImageView>
+      <PasswordField layoutX="260.0" layoutY="286.0" prefHeight="40.0" prefWidth="238.0" promptText="Password" focusTraversable="false" fx:id="password">
+         <font>
+            <Font name="Goudy Old Style" size="20.0" />
+         </font>
+      </PasswordField>
+      <TextField layoutX="260.0" layoutY="207.0" prefHeight="40.0" prefWidth="238.0" promptText="Username" focusTraversable="false" fx:id="username">
+         <font>
+            <Font name="Goudy Old Style" size="20.0" />
+         </font>
+      </TextField>
+      <Button layoutX="332.0" layoutY="368.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: white;" text="LOGIN" textFill="#204b9c" fx:id="loginButton" onAction="#loginButtonAction">
+         <font>
+            <Font name="Goudy Old Style Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: white;" text="BACK" textFill="#204b9c" fx:id="backButton" onAction="#backButtonAction">
+         <font>
+            <Font name="Goudy Old Style Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
