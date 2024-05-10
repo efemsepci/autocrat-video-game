@@ -17,8 +17,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static com.efemsepci.autocratvideogame.Client.loginID;
-import static com.efemsepci.autocratvideogame.Client.selectedSession;
+import static com.efemsepci.autocratvideogame.Client.*;
 import static com.efemsepci.autocratvideogame.classes.GameSessionDAO.addPlayer;
 import static com.efemsepci.autocratvideogame.classes.GameSessionDAO.getGameSessions;
 import static com.efemsepci.autocratvideogame.classes.UserDAO.getUserByID;
@@ -31,13 +30,21 @@ public class GameController implements Initializable {
             if(newValue != null){
                 try {
                     User loginedUser = getUserByID(loginID);
-                    System.out.println(loginID);
+                    //System.out.println(loginID);
                     selectedSession = newValue;
-                    System.out.println(loginedUser.getId());
-                    System.out.println(selectedSession.getName());
+                    //System.out.println(loginedUser.getId());
+                    //System.out.println(selectedSession.getName());
                     if(newValue.getNumOfPlayers() < 4){
                         addPlayer(newValue, loginedUser);
                         Client m = new Client();
+                        try {
+                            m.initializeClient();
+                            m.sendUserDataToServer();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        } catch (SQLException e) {
+                            throw new RuntimeException(e);
+                        }
                         m.changeScene("otokratGameRoom.fxml");
                     }
                 }catch (SQLException | IOException e) {
@@ -76,9 +83,9 @@ public class GameController implements Initializable {
         ObservableList<GameSession> gameSessionNames = FXCollections.observableArrayList();
         try {
             List<GameSession> gameSessions = getGameSessions();
-            System.out.println(gameSessions);
+            //System.out.println(gameSessions);
             for (GameSession session : gameSessions) {
-                System.out.println(session.getNumOfPlayers());
+                //System.out.println(session.getNumOfPlayers());
                 gameSessionNames.add(session);
             }
         } catch (SQLException e) {

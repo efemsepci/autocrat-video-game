@@ -9,12 +9,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import static com.efemsepci.autocratvideogame.Client.loginID;
-import static com.efemsepci.autocratvideogame.Client.selectedSession;
+import static com.efemsepci.autocratvideogame.Client.*;
+import static com.efemsepci.autocratvideogame.Server.*;
 import static com.efemsepci.autocratvideogame.classes.GameSessionDAO.getGameSessionById;
 import static com.efemsepci.autocratvideogame.classes.GameSessionDAO.removePlayer;
 import static com.efemsepci.autocratvideogame.classes.UserDAO.getUserByID;
@@ -31,22 +32,19 @@ public class GameRoomController implements Initializable {
         }
         roomName.setText(currentGameSession.getName());
         numOfPlayers.setText(currentGameSession.getNumOfPlayers() + "/4");
-        try {
-            if(currentGameSession.getNumOfPlayers() == 1){
-                player1.setText(getUserByID(loginID).getUsername());
+        System.out.println(user2name);
+        if(currentGameSession.getNumOfPlayers() == 1){
+                player1.setText(user1name);
             }
-            else if(currentGameSession.getNumOfPlayers() == 2){
-                player2.setText(getUserByID(loginID).getUsername());
+        else if(currentGameSession.getNumOfPlayers() == 2){
+                player2.setText(user2name);
             }
-            else if(currentGameSession.getNumOfPlayers() == 3){
-                player3.setText(getUserByID(loginID).getUsername());
+        else if(currentGameSession.getNumOfPlayers() == 3){
+                player3.setText(user3name);
             }
-            else if(currentGameSession.getNumOfPlayers() == 4){
-                player4.setText(getUserByID(loginID).getUsername());
+        else if(currentGameSession.getNumOfPlayers() == 4){
+                player4.setText(user4name);
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @FXML

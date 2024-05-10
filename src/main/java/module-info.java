@@ -13,8 +13,10 @@ module com.efemsepci.autocratvideogame {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires com.fasterxml.jackson.databind;
 
     opens com.efemsepci.autocratvideogame to javafx.fxml;
     exports com.efemsepci.autocratvideogame;
     exports com.efemsepci.autocratvideogame.controller;
+    exports com.efemsepci.autocratvideogame.classes;
 }
