@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="761.0" style="-fx-background-color: #204B9C;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.efemsepci.autocratvideogame.controller.GameRoomController">
+   <children>
+      <AnchorPane layoutX="73.0" layoutY="188.0" prefHeight="55.0" prefWidth="235.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Text fill="#204b9c" layoutX="16.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WAITING" wrappingWidth="203.73666381835938" fx:id="player1">
+               <font>
+                  <Font name="Goudy Old Style Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="448.0" layoutY="298.0" prefHeight="55.0" prefWidth="235.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Text fill="#204b9c" layoutX="16.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WAITING" wrappingWidth="203.73666381835938" fx:id="player4">
+               <font>
+                  <Font name="Goudy Old Style Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="448.0" layoutY="188.0" prefHeight="55.0" prefWidth="235.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Text fill="#204b9c" layoutX="16.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WAITING" wrappingWidth="203.73666381835938" fx:id="player2">
+               <font>
+                  <Font name="Goudy Old Style Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="73.0" layoutY="298.0" prefHeight="55.0" prefWidth="235.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Text fill="#204b9c" layoutX="16.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WAITING" wrappingWidth="203.73666381835938" fx:id="player3">
+               <font>
+                  <Font name="Goudy Old Style Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text fx:id="roomName" fill="WHITE" layoutX="335.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Name" wrappingWidth="135.7366943359375">
+         <font>
+            <Font name="Goudy Old Style Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="335.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0/4" wrappingWidth="47.7366943359375" fx:id="numOfPlayers">
+         <font>
+            <Font name="Goudy Old Style Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="46.0" prefWidth="118.0" style="-fx-background-color: ffffff;" text="BACK" textFill="#204b9c">
+         <font>
+            <Font name="Goudy Old Style Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="startGameButton" layoutX="270.0" layoutY="433.0" mnemonicParsing="false" onAction="#startGameButtonAction" prefHeight="46.0" prefWidth="266.0" style="-fx-background-color: ffffff;" text="START GAME" textFill="#204b9c">
+         <font>
+            <Font name="Goudy Old Style Bold" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

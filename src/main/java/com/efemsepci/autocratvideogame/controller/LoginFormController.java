@@ -1,7 +1,6 @@
 package com.efemsepci.autocratvideogame.controller;
 
-import com.efemsepci.autocratvideogame.Main;
-import com.efemsepci.autocratvideogame.classes.UserDAO;
+import com.efemsepci.autocratvideogame.Client;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -13,6 +12,7 @@ import java.net.URL;
 
 import java.util.ResourceBundle;
 
+import static com.efemsepci.autocratvideogame.Client.loginID;
 import static com.efemsepci.autocratvideogame.classes.UserDAO.*;
 
 public class LoginFormController implements Initializable {
@@ -39,8 +39,9 @@ public class LoginFormController implements Initializable {
         String usernameEntered = username.getText();
         String passwordEntered = password.getText();
         if(validateUser(usernameEntered,passwordEntered)){
-            Main m = new Main();
-            m.changeScene("test.fxml");
+            loginID = getUserID(usernameEntered,passwordEntered);
+            Client m = new Client();
+            m.changeScene("otokratGameScreen.fxml");
         }
         else{
             System.out.println("Register please!");
@@ -49,7 +50,7 @@ public class LoginFormController implements Initializable {
 
     @FXML
     private void backButtonAction(ActionEvent event) throws Exception{
-        Main m = new Main();
+        Client m = new Client();
         m.changeScene("otokratLoginScreen.fxml");
     }
 }

@@ -1,6 +1,6 @@
 package com.efemsepci.autocratvideogame.controller;
 
-import com.efemsepci.autocratvideogame.Main;
+import com.efemsepci.autocratvideogame.Client;
 import com.efemsepci.autocratvideogame.classes.User;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static com.efemsepci.autocratvideogame.Client.loginID;
 import static com.efemsepci.autocratvideogame.classes.UserDAO.*;
 
 public class RegisterFormController implements Initializable {
@@ -44,8 +45,9 @@ public class RegisterFormController implements Initializable {
         if(!checkUsernameExists(usernameEntered)){
             User userTmp = new User(emailEntered, usernameEntered, passwordEntered);
             addUser(userTmp);
-            Main m = new Main();
-            m.changeScene("test.fxml");
+            loginID = getUserID(usernameEntered,passwordEntered);
+            Client m = new Client();
+            m.changeScene("otokratGameScreen.fxml");
         }
         else{
             System.out.println("Enter another username!");
@@ -54,7 +56,7 @@ public class RegisterFormController implements Initializable {
 
     @FXML
     private void backButtonAction(ActionEvent event) throws Exception{
-        Main m = new Main();
+        Client m = new Client();
         m.changeScene("otokratLoginScreen.fxml");
     }
 }

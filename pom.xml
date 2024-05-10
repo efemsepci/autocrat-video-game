@@ -165,7 +165,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.efemsepci.autocratvideogame/com.efemsepci.autocratvideogame.HelloApplication
+                                com.efemsepci.autocratvideogame/com.efemsepci.autocratvideogame.Client
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

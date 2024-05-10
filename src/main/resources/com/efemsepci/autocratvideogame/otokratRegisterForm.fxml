@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -12,30 +13,36 @@
             <Image url="@capital_lux_elemek201703031806-e1515618578929.jpeg" />
          </image>
       </ImageView>
-      <PasswordField layoutX="261.0" layoutY="303.0" prefHeight="40.0" prefWidth="238.0" promptText="Password" focusTraversable="false" fx:id="password">
+      <PasswordField fx:id="password" focusTraversable="false" layoutX="261.0" layoutY="303.0" prefHeight="40.0" prefWidth="238.0" promptText="Password">
          <font>
             <Font name="Goudy Old Style" size="20.0" />
          </font>
       </PasswordField>
-      <TextField layoutX="261.0" layoutY="224.0" prefHeight="40.0" prefWidth="238.0" promptText="Username" focusTraversable="false" fx:id="username">
+      <TextField fx:id="username" focusTraversable="false" layoutX="261.0" layoutY="224.0" prefHeight="40.0" prefWidth="238.0" promptText="Username">
          <font>
             <Font name="Goudy Old Style" size="20.0" />
          </font>
       </TextField>
-      <Button layoutX="326.0" layoutY="392.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="109.0" style="-fx-background-color: white;" text="REGISTER" textFill="#204b9c" fx:id="registerButton" onAction="#registerButtonAction">
+      <Button fx:id="registerButton" layoutX="326.0" layoutY="392.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="30.0" prefWidth="109.0" style="-fx-background-color: white;" text="REGISTER" textFill="#204b9c">
          <font>
             <Font name="Goudy Old Style Bold" size="16.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <TextField layoutX="261.0" layoutY="141.0" prefHeight="40.0" prefWidth="238.0" promptText="Email" focusTraversable="false" fx:id="email">
+      <TextField fx:id="email" focusTraversable="false" layoutX="261.0" layoutY="141.0" prefHeight="40.0" prefWidth="238.0" promptText="Email">
          <font>
             <Font name="Goudy Old Style" size="20.0" />
          </font>
       </TextField>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: white;" text="BACK" textFill="#204b9c" fx:id="backButton" onAction="#backButtonAction">
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: white;" text="BACK" textFill="#204b9c">
          <font>
             <Font name="Goudy Old Style Bold" size="16.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
 </AnchorPane>

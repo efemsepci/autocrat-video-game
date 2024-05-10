@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DatabaseConnection {
 
     public static Connection getConnection() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/autocrat_video_game";
+        String url = "jdbc:mysql://192.168.1.156:3306/autocrat_video_game";
         String username = "efemsepci";
         String password = "efemsepci";
 

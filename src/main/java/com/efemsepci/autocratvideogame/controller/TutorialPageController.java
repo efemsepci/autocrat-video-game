@@ -1,6 +1,6 @@
 package com.efemsepci.autocratvideogame.controller;
 
-import com.efemsepci.autocratvideogame.Main;
+import com.efemsepci.autocratvideogame.Client;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -20,7 +20,7 @@ public class TutorialPageController implements Initializable {
 
     @FXML
     private void backButtonAction(ActionEvent event) throws Exception{
-        Main m = new Main();
+        Client m = new Client();
         m.changeScene("otokratLoginScreen.fxml");
     }
 

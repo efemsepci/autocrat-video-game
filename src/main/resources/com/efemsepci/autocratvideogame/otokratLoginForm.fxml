@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -12,25 +13,31 @@
             <Image url="@capital_lux_elemek201703031806-e1515618578929.jpeg" />
          </image>
       </ImageView>
-      <PasswordField layoutX="260.0" layoutY="286.0" prefHeight="40.0" prefWidth="238.0" promptText="Password" focusTraversable="false" fx:id="password">
+      <PasswordField fx:id="password" focusTraversable="false" layoutX="260.0" layoutY="286.0" prefHeight="40.0" prefWidth="238.0" promptText="Password">
          <font>
             <Font name="Goudy Old Style" size="20.0" />
          </font>
       </PasswordField>
-      <TextField layoutX="260.0" layoutY="207.0" prefHeight="40.0" prefWidth="238.0" promptText="Username" focusTraversable="false" fx:id="username">
+      <TextField fx:id="username" focusTraversable="false" layoutX="260.0" layoutY="207.0" prefHeight="40.0" prefWidth="238.0" promptText="Username">
          <font>
             <Font name="Goudy Old Style" size="20.0" />
          </font>
       </TextField>
-      <Button layoutX="332.0" layoutY="368.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: white;" text="LOGIN" textFill="#204b9c" fx:id="loginButton" onAction="#loginButtonAction">
+      <Button fx:id="loginButton" layoutX="332.0" layoutY="368.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: white;" text="LOGIN" textFill="#204b9c">
          <font>
             <Font name="Goudy Old Style Bold" size="16.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: white;" text="BACK" textFill="#204b9c" fx:id="backButton" onAction="#backButtonAction">
+      <Button fx:id="backButton" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: white;" text="BACK" textFill="#204b9c">
          <font>
             <Font name="Goudy Old Style Bold" size="16.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
 </AnchorPane>
